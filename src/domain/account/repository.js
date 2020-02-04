@@ -30,10 +30,7 @@ class AccountRepository{
         const now = new Date();
         const saltRounds = 3;
         let password;
-        await bcrypt.hash(info.password, saltRounds, function(err, hash) {
-            password = hash;
-            console.log(hash)
-        });
+        password = await bcrypt.hash(info.password, saltRounds);
         await this.database.transaction( async trx => {
             const account = await this.database('accounts')
                 .insert({
@@ -62,7 +59,7 @@ class AccountRepository{
     async findAccountById(userId) {
         const account = await this.database('accounts')
             .select(this.accountColumns)
-            .where(userId)
+            .where({userId})
             .first();
         return {
             ...account,
