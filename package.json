@@ -1,0 +1,33 @@
+{
+  "name": "graphql-initial-setup-guide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.7.2",
+    "apollo-server": "^2.9.7",
+    "aws-sdk": "^2.610.0",
+    "bcrypt": "^3.0.7",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.5.8",
+    "graphql-scalars": "^1.0.6",
+    "knex": "^0.20.8",
+    "lodash": "^4.17.15",
+    "lodash.merge": "^4.6.2",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "nodemon": "^1.19.4"
+  }
+}
